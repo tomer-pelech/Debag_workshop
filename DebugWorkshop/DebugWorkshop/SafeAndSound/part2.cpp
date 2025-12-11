@@ -4,7 +4,7 @@
 
 char* safe_string_copy(char* dest, unsigned int destsize, char* src)
 {
-	unsigned int srcsize = (unsigned int)strlen(src);
+	unsigned int srcsize = (unsigned int)strlen(src) + 1;
 	if (srcsize >= destsize)
 		throw std::overflow_error("possible buffer overflow");
 
